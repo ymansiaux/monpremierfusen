@@ -1,0 +1,51 @@
+---
+title: "flat_tirage_loto.Rmd empty"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r development, include=FALSE}
+library(testthat)
+```
+
+```{r development-load}
+# Load already included functions if relevant
+pkgload::load_all(export_all = FALSE)
+```
+
+# tirage_loto
+
+```{r function-tirage_loto}
+#' tirage du loto
+#' @return un vecteur avec 6 numéros + 2 numéros complémentaires
+#' @export
+#' @examples
+tirage_loto <- function() {
+  six_numeros <- sample(1:49, size = 6, replace = FALSE)
+  numeros_complementaires <- tirage_numeros_complementaires()
+  tirage_complet <- c(six_numeros, numeros_complementaires)
+  return(tirage_complet)
+}
+
+tirage_numeros_complementaires <- function() {
+  numeros_complementaires <- sample(1:9, size = 2, replace = FALSE)
+  return(numeros_complementaires)
+}
+```
+
+```{r examples-tirage_loto}
+tirage_loto()
+```
+
+```{r tests-tirage_loto}
+test_that("tirage_loto works", {})
+```
+
+
+```{r development-inflate, eval=FALSE}
+# Run but keep eval=FALSE to avoid infinite loop
+# Execute in the console directly
+fusen::inflate(flat_file = "dev/flat_tirage_loto.Rmd", vignette_name = "Go further")
+```
+
