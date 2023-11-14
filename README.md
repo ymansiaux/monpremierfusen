@@ -32,6 +32,10 @@ Full documentation website on: https://ymansiaux.github.io/monpremierfusen
 
 Full documentation website on: https://ymansiaux.github.io/monpremierfusen
 
+## Documentation
+
+Full documentation website on: https://ymansiaux.github.io/monpremierfusen
+
 ## Example
 
 This is a basic example which shows you how to solve a common problem:
